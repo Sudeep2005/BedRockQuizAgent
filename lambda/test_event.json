@@ -1,0 +1,32 @@
+{
+  "actionGroup": "QuizRAGAction",
+  "apiPath": "/search",
+  "httpMethod": "POST",
+  "parameters": [
+    {
+      "name": "search_term",
+      "type": "string",
+      "value": "Create a 5-question quiz on fundamentals of Agentic AI and LangGraph integration"
+    }
+  ],
+  "sessionAttributes": {
+    "topic": "Agentic AI and LangGraph",
+    "difficulty": "medium",
+    "quizType": "multiple-choice",
+    "lastQuizId": "QZ-20251031-001"
+  },
+  "promptSessionAttributes": {
+    "previousContext": "Agentic AI combines reasoning, memory, and planning to help LLMs take intelligent actions.",
+    "previousAnswer": "LangGraph supports coordination between specialized AI agents for tasks like summarization and tutoring."
+  },
+  "invocationId": "quizrunner-123e4567-e89b-12d3-a456-426614174000",
+  "agent": {
+    "name": "QuizRunnerAgent",
+    "version": "1.0.0"
+  },
+  "metadata": {
+    "source": "AWSBedrock",
+    "timestamp": "2025-10-31T10:00:00Z",
+    "region": "us-east-1"
+  }
+}

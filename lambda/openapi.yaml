@@ -1,0 +1,61 @@
+openapi: 3.0.0
+info:
+  title: Astra DB Quiz Knowledge Retrieval API
+  description: >
+    API for retrieving quiz-related context from Astra DB.
+    This API connects to the QuizCreatorDb database and the quizrag collection
+    to perform vector-based similarity searches for RAG-powered quiz generation.
+  version: 1.0.0
+
+paths:
+  /read:
+    post:
+      summary: Perform semantic search from Astra DB collection
+      description: >
+        Uses Astra DB to find semantically similar content in the quizrag collection
+        under the QuizCreatorDb database based on the given search term.
+      operationId: readFromAstra
+      parameters:
+        - name: search_term
+          in: query
+          required: true
+          description: The text to search for in the Astra DB quizrag collection.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful vector similarity search
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  search_term:
+                    type: string
+                    description: The search term used for querying.
+                  results:
+                    type: array
+                    description: List of top semantically similar content.
+                    items:
+                      type: string
+                  result_count:
+                    type: integer
+                    description: Number of documents returned.
+        '400':
+          description: Bad request (missing or invalid search_term)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+        '500':
+          description: Internal server error (Astra DB query or processing failed)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
