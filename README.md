@@ -1,9 +1,3 @@
-Excellent — now we’re talking about turning this **Bedrock QuizRunner Agent** into a *pro-level GitHub project* with a clean, production-grade `README.md` that looks like it came from an AWS engineer’s repo.
-
-Below is a **full professional README** template — polished, formatted, and designed for open-source presentation 👇
-
----
-
 # 🧠 Bedrock QuizRunner Agent
 
 > **Serverless RAG-powered Quiz Generator** built using **AWS Bedrock Agents**, **Astra DB**, and **AWS Lambda (Python 3.13)** — no-code/low-code approach.
@@ -70,7 +64,7 @@ Key Features:
 ### 1️⃣ Clone this Repository
 
 ```bash
-git clone https://github.com/<your-username>/bedrock-quizrunner-agent.git
+git clone https://github.com/Sudeep2005/bedrock-quizrunner-agent.git
 cd bedrock-quizrunner-agent
 ```
 
